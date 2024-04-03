@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="atividade.css"/>
+   <script>
+function salvar(){
+    let form = document.getElementById("form-cadastro")
+    let nome = form.nome.value
+    let email = form.nome.value
+    let senha = form.senha.value
+    if(nome.trim() == ""){
+        alert("Preencha o nome")
+        return false
+    }
+   
+    if(senha.trim() == ""){
+        alert("Preencha qual espécie ")
+        return false
+        }
+        alert("Cadastrado com sucesso")
+}
+   </script>
+</head>
+<body>
+    <form  id="form-cadastro" onsubmit="return false">
+    <div class="linha">
+       <label >Nome da planta</label>
+       <input type="text" name="nome" maxlength="40" autocomplete=""/> 
+    </div>
+
+
+    <div class="linha">
+       <label>Espécie</label>
+       <input type="text" name="senha" maxlength="80" />
+    </div>
+
+   
+
+    <div class="linha">
+        <label>Altura máxima</label>
+    <select name="estado"> 
+    <option value="SP">Até 1m</option>
+    <option value="RJ">Até 1,5m</option>
+    <option value="RJ">Até 2m</option>
+
+    </select>
+    </div>
+<input type="submit" name="enviar" value="Cadastrar" onclick="salvar()" />
+    </form>
+   
+</body>
+</html>
